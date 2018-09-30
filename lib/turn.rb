@@ -18,7 +18,7 @@ end
 
 
 
-dedef move(board, index, current_player)
+def move(board, index, current_player)
   if current_player == "X" || current_player == "O"
   board[index] = current_player
 end
