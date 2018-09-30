@@ -2,12 +2,12 @@ def position_taken?(board, index)
   board[index] != " "
 end
 
-def display_board
-  puts "   |   |   "
+def display_board(board)
+  puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
-  puts "   |   |   "
+  puts " #{board[3]} | #{board[4]} | #{board[5]} "
   puts "-----------"
-  puts "   |   |   "
+  puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
 def valid_move?(board, index)
@@ -18,11 +18,13 @@ end
 
 
 
-def move(board, index, current_player)
-  if current_player == "X" || current_player == "O"
-  board[index] = current_player
+def input_to_index(user_input)
+  user_input.to_i - 1
 end
 
+def move(board, index, current_player = "X")
+  board[index] = current_player
+end
 
 
 
