@@ -8,9 +8,8 @@ end
 
 def valid_move?(board, index)
 #d return true if the index is within the correct range of 0-8 and is currently unoccupied by an X or O token.
-if !(position_taken?(board)) && index.between(0, 8)
-return true
-end
+!(position_taken?(board)) && index.between(0, 8)
+
 end
 
 def move(board)
